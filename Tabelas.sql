@@ -37,4 +37,3 @@ deEmail varchar(400),
 flAtivo Varchar(1),
 UF Varchar(2),
 CONSTRAINT pk_Instrutor primary key(ID,nmInstrutor)) ENGINE = innodb DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-

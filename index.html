@@ -14,24 +14,24 @@
     	 var url = "http://localhost:8000/";
     	 function checkInstrutores(){
   		  if(document.getElementById('instrucCheck').checked){
-       		document.getElementById('ifCheck').style.display = 'block'; 
+       		document.getElementById('ifCheck').style.display = 'block';
     		} else {
-        	document.getElementById('ifCheck').style.display = 'none'; 
-    		}   
+        	document.getElementById('ifCheck').style.display = 'none';
+    		}
 		 };
 		  function checkAdjuntos(){
   		  if(document.getElementById('adjCheck').checked){
-       		document.getElementById('ifCheckAdj').style.display = 'block'; 
+       		document.getElementById('ifCheckAdj').style.display = 'block';
     		} else {
-        	document.getElementById('ifCheckAdj').style.display = 'none'; 
-    		}   
+        	document.getElementById('ifCheckAdj').style.display = 'none';
+    		}
 		 };
 		  function checkMinistros(){
   		  if(document.getElementById('MinistCheck').checked){
-       		document.getElementById('ifCheckMtr').style.display = 'block'; 
+       		document.getElementById('ifCheckMtr').style.display = 'block';
     		} else {
-        	document.getElementById('ifCheckMtr').style.display = 'none'; 
-    		}   
+        	document.getElementById('ifCheckMtr').style.display = 'none';
+    		}
 		 };
 </script>
 <script type="text/javascript"></script>
@@ -41,7 +41,7 @@
 
 	<div class="container">
 		<div class="row">
-		    <div class="col-lg-12 margin-tb">					
+		    <div class="col-lg-12 margin-tb">
 		        <div class="pull-left">
 		            <h2>Centúria dos Templos do Vale do Amanhecer</h2>
 		        </div>
@@ -82,15 +82,15 @@
 		      <div class="modal-body">
 		      		<form data-toggle="validator" action="api/create.php" method="POST">
 
-		      			<div class="form-group">
-							<label class="control-label" for="title">Nome do instrutor responsável:</label><input type="text" name="title"/><br> <!-- Pegar esses valores da tabela de instrutores e para o campo outros instrutores tambem, alterar o tipo de list box para permitir multipla seleção-->
-							Outros Instrutores 
+		      		<div class="form-group">
+							<label class="control-label" for="nmInstrutorPrinc">Nome do instrutor responsável:</label><input type="text" name="nmInstrutorPrinc"/><br> <!-- Pegar esses valores da tabela de instrutores e para o campo outros instrutores tambem, alterar o tipo de list box para permitir multipla seleção-->
+							Outros Instrutores
 							<input  class="control-label" type="checkbox" name="instruc" onclick="javascript:checkInstrutores();" value="otherinstruc" id="instrucCheck"> <br>
 							<div id="ifCheck" style="display:none">Preencha os nomes:
-    							<input type='text' id='outrosInstruc' name='title'/>
+    							<input type='text' id='outrosInstruc' name='nmOutrosInstrc'/>
 							</div>
-							<label class="control-label" for="title">Localidade do curso:</label><input type="text" name="title"/> 
-							<label class="control-label" for="title">UF: </label><select name="UF">
+							<label class="control-label">Localidade do curso:</label><input type="text" name="nmLocalCurso"/>
+							<label class="control-label">UF: </label><select name="UF">
 																						    <option value="AC">AC</option>
 																						    <option value="AL">AL</option>
 																						    <option value="AM">AM</option>
@@ -119,33 +119,33 @@
 																							<option value="SP">SP</option>
 																							<option value="TO">TO</option>
 																						</select><br>
-							<label class="control-label" for="title">Presidente do templo:</label><input type="text" name="title"/><br>
-							Demais presidentes  
+							<label class="control-label">Presidente do templo:</label><input type="text" name="nmPresidente"/><br>
+							Demais presidentes
 							<input  class="control-label" type="checkbox" name="Adjunt" onclick="javascript:checkAdjuntos();" value="OthersAdj" id="adjCheck"> <br>
 							<div id="ifCheckAdj" style="display:none">Preencha os nomes:
-    							<input type='text' id='outrosAdjuntos' name='title'/>
+    							<input type='text' id='outrosAdjuntos' name='nmOutrosPresidentes'/>
 							</div>
-							<label class="control-label" for="title">Ministro do presidente:</label><input type="text" name="title"/><br>
-							Ministro demais presidente 
+							<label class="control-label" for="title">Ministro do presidente:</label><input type="text" name="nmMinistroPresidente"/><br>
+							Ministro demais presidente
 							<input  class="control-label" type="checkbox" name="Minis" onclick="javascript:checkMinistros();" value="OthersMinist" id="MinistCheck"> <br>
 							<div id="ifCheckMtr" style="display:none">Preencha os nomes:
-    							<input type='text' id='outrosAdjuntos' name='title'/>
+    							<input type='text' id='outrosAdjuntos' name='nmOutrosMinistros'/>
 							</div>
-							
-
-							<label class="control-label" for="title">Data primeira aula: </label><input type="date" name="title"/><br>
-							<label class="control-label" for="title">Data ultima aula: </label><input type="date" name="title"/><br>
 
 
-							<label class="control-label" for="title">1ª Aula Mestre Sol: </label><input type="number" min="0" max="99" name="title"/><br>
-							<label class="control-label" for="title">1ª Aula Mestre Lua: </label><input type="number" min="0" max="99" name="title"/><br>
-							<label class="control-label" for="title">1ª Aula Ninfa Sol: </label><input type="number" min="0" max="99" name="title"/><br>
-							<label class="control-label" for="title">1ª Aula Ninfa Lua: </label><input type="number" min="0" max="99" name="title"/><br>
-							<label class="control-label" for="title">Autorizados Mestre Sol: </label><input type="number" min="0" max="99" name="title"/><br>
-							<label class="control-label" for="title">Autorizados Mestre Lua: </label><input type="number" min="0" max="99" name="title"/><br>
-							<label class="control-label" for="title">Autorizadas Ninfa Sol: </label><input type="number" min="0" max="99" name="title"/><br>
-							<label class="control-label" for="title">Autorizadas Ninfa Lua: </label><input type="number" min="0" max="99" name="title"/><br>				
-								
+							<label class="control-label" for="title">Data primeira aula: </label><input type="date" name="dtIniCurso"/><br>
+							<label class="control-label" for="title">Data ultima aula: </label><input type="date" name="dtFimCurso"/><br>
+
+
+							<label class="control-label" for="title">1ª Aula Mestre Sol: </label><input type="number" min="0" max="99" name="qtdMS"/><br>
+							<label class="control-label" for="title">1ª Aula Mestre Lua: </label><input type="number" min="0" max="99" name="qtdML"/><br>
+							<label class="control-label" for="title">1ª Aula Ninfa Sol: </label><input type="number" min="0" max="99" name="qtdNS"/><br>
+							<label class="control-label" for="title">1ª Aula Ninfa Lua: </label><input type="number" min="0" max="99" name="qtdNL"/><br>
+							<label class="control-label" for="title">Autorizados Mestre Sol: </label><input type="number" min="0" max="99" name="qtdAutMS"/><br>
+							<label class="control-label" for="title">Autorizados Mestre Lua: </label><input type="number" min="0" max="99" name="qtdAutML"/><br>
+							<label class="control-label" for="title">Autorizadas Ninfa Sol: </label><input type="number" min="0" max="99" name="qtdAutNS"/><br>
+							<label class="control-label" for="title">Autorizadas Ninfa Lua: </label><input type="number" min="0" max="99" name="qtdAutNL"/><br>
+
 							Curso finalizado <input type="checkbox" name="flagFinalizado" value="flFinalizado">  <br>
 							<div class="help-block with-errors"></div>
 						</div>
